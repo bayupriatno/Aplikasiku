@@ -1,0 +1,21 @@
+<InstallerLayout>:
+    orientation: 'vertical'
+
+    FileChooserIconView:
+        size_hint_y: 0.3
+        on_selection: root.select_file(self.selection)
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: 0.3
+        ScrollView:
+            do_scroll_x: False
+            GridLayout:
+                id: site_list
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+
+    WebView:
+        id: webview
+        size_hint_y: 0.4
